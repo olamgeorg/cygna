@@ -1,0 +1,5 @@
+import Link from "next/link";
+const S=[["Shop","Electronics, fashion, home & more","/shop","sec-shop"],["Cars","New, used & certified in Lagos","/cars","sec-cars"],["Real Estate","Buy, rent & short-let","/real-estate","sec-estate"],["Services","Hire freelancers & gigs","/services","sec-services"]];
+export default function Home(){return(<main className="max-w-6xl mx-auto px-4 py-10">
+<h1 className="text-3xl font-bold">Cygna Consult</h1><p className="mt-2 text-gray-700">Shop, drive, live and hire — all in Lagos, Nigeria.</p>
+<div className="grid sm:grid-cols-2 gap-4 mt-8">{S.map(([t,d,h,c])=>(<Link key={h} href={h} className={`${c} bg-[#F5F5F5] rounded-xl p-6 block`}><h2 className="text-xl font-semibold">{t}</h2><p className="text-sm my-2">{d}</p><span className="btn">Explore</span></Link>))}</div><div className="bg-[#222325] text-white rounded-xl p-6 mt-6"><h2 className="text-xl font-semibold">Need work done? Hire a freelancer.</h2><a href="/jobs" className="font-bold underline" style={{color:"#1DBF73"}}>Post a job →</a></div></main>);}
